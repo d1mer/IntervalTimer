@@ -4,11 +4,55 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:IntervalTimer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="40 20 30 40">
+            <TextBlock x:Name="textVolume" FontFamily="Segoe MDL2 Assets" FontSize="26" Text="&#xE767;"
+                       VerticalAlignment="Center"/>
+            <Slider Minimum="0" Maximum="100" Margin="30 0 0 0" />
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize = "26" Text="Количество повторений" />
+        <muxc:NumberBox x:Name="numberBoxRepetitions" Value="1" 
+                        SpinButtonPlacementMode="Inline" Minimum="1"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 30 0 0" />
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   Margin="0 50 0 0" FontSize = "26" Text="Работа" />
+        <StackPanel Orientation="Horizontal" Margin="0 30 0 0" HorizontalAlignment="Center">
+            <muxc:NumberBox x:Name="numberBoxWorkMinutes" Value="0" 
+                        SpinButtonPlacementMode="Compact" Minimum="0"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock FontSize="26" FontWeight="Bold" Text=":" Margin="15 0 15 0"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <muxc:NumberBox x:Name="numberBoxWorkSeconds" Value="1" 
+                        SpinButtonPlacementMode="Compact" Minimum="1" Maximum="59"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
 
-    </Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   Margin="0 50 0 0" FontSize = "26" Text="Отдых" />
+        <StackPanel Orientation="Horizontal" Margin="0 30 0 0" HorizontalAlignment="Center">
+            <muxc:NumberBox x:Name="numberBoxRestMinutes" Value="0" 
+                        SpinButtonPlacementMode="Compact" Minimum="0"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock FontSize="26" FontWeight="Bold" Text=":" Margin="15 0 15 0"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <muxc:NumberBox x:Name="numberBoxRestSeconds" Value="1" 
+                        SpinButtonPlacementMode="Compact" Minimum="1" Maximum="59"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+        <Button HorizontalAlignment="Center" Margin="0 70 0 0">
+            <Button.Content>
+                <StackPanel Orientation="Horizontal" Margin="10 0 10 0">
+                    <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE916;" FontSize="26"
+                               VerticalAlignment="Center" Margin="20 0 25 0" Foreground="Red"/>
+                    <TextBlock Text="Начать" FontSize="26" Margin="0 0 20 0" />
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    </StackPanel>
 </Page>
