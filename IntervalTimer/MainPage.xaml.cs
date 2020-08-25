@@ -27,5 +27,23 @@ namespace IntervalTimer
         {
             this.InitializeComponent();
         }
+
+        private void NumberBoxWorkSeconds_ValueChanged(MUXC.NumberBox sender, MUXC.NumberBoxValueChangedEventArgs args)
+        {
+            if(args.NewValue == 60)
+            {
+                sender.Value = 0;
+                numberBoxWorkMinutes.Value += 1;
+            }
+        }
+
+        private void NumberBoxRestSeconds_ValueChanged(MUXC.NumberBox sender, MUXC.NumberBoxValueChangedEventArgs args)
+        {
+            if (args.NewValue == 60)
+            {
+                sender.Value = 0;
+                numberBoxRestMinutes.Value += 1;
+            }
+        }
     }
 }

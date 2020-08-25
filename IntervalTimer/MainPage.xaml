@@ -29,8 +29,9 @@
             <TextBlock FontSize="26" FontWeight="Bold" Text=":" Margin="15 0 15 0"
                        HorizontalAlignment="Center" VerticalAlignment="Center" />
             <muxc:NumberBox x:Name="numberBoxWorkSeconds" Value="1" 
-                        SpinButtonPlacementMode="Compact" Minimum="1" Maximum="59"
-                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        SpinButtonPlacementMode="Compact" Minimum="0" Maximum="60"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" 
+                        ValueChanged="NumberBoxWorkSeconds_ValueChanged" />
         </StackPanel>
 
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
@@ -42,8 +43,9 @@
             <TextBlock FontSize="26" FontWeight="Bold" Text=":" Margin="15 0 15 0"
                        HorizontalAlignment="Center" VerticalAlignment="Center" />
             <muxc:NumberBox x:Name="numberBoxRestSeconds" Value="1" 
-                        SpinButtonPlacementMode="Compact" Minimum="1" Maximum="59"
-                        HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        SpinButtonPlacementMode="Compact" Minimum="0" Maximum="60"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        ValueChanged="NumberBoxRestSeconds_ValueChanged" />
         </StackPanel>
         <Button HorizontalAlignment="Center" Margin="0 70 0 0">
             <Button.Content>
