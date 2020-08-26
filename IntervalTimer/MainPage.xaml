@@ -47,7 +47,7 @@
                         HorizontalAlignment="Center" VerticalAlignment="Center"
                         ValueChanged="NumberBoxRestSeconds_ValueChanged" />
         </StackPanel>
-        <Button HorizontalAlignment="Center" Margin="0 70 0 0">
+        <Button HorizontalAlignment="Center" Margin="0 70 0 0" Click="StartButton_Click">
             <Button.Content>
                 <StackPanel Orientation="Horizontal" Margin="10 0 10 0">
                     <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE916;" FontSize="26"

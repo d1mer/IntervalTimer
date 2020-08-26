@@ -45,5 +45,10 @@ namespace IntervalTimer
                 numberBoxRestMinutes.Value += 1;
             }
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TrainTimerPage));
+        }
     }
 }
